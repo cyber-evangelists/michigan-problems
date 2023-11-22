@@ -69,7 +69,7 @@ def filter_articles(data, keys_to_exclude):
     """
 
     # Initialize an empty list to accumulate filtered articles
-    filtered_articles = []
+    # filtered_articles = []
 
     # Standard nested for loop (commented out for later use in dictionary comprehension)
     # for article in data:
@@ -80,9 +80,9 @@ def filter_articles(data, keys_to_exclude):
     #     filtered_articles.append(filtered_article)
 
     # Dictionary comprehension nested within a list comprehension
+
     filtered_articles = [
-        {k: v for k, v in article.items() if k not in keys_to_exclude}
-        for article in data
+        {k: v for k, v in article.items() if k not in keys_to_exclude} for article in data
     ]
 
     return filtered_articles
@@ -140,7 +140,7 @@ def get_organization_names(article):
     return [
         keyword["value"]
         for keyword in article.get("keywords", [])
-        if keyword.get("name") == "organizations"
+        if keyword["name"] == "organizations"
     ]
 
 

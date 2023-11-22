@@ -1,0 +1,53 @@
+{
+  "name": "CR90 corvette",
+  "model": "CR90 corvette",
+  "passengers": [
+    {
+      "name": "R2-D2",
+      "height": "96",
+      "mass": "32",
+      "birth_year": "33BBY",
+      "eye_color": "red",
+      "homeworld": {
+        "name": "Naboo",
+        "diameter": "12120",
+        "climate": "temperate",
+        "terrain": "grassy hills, swamps, forests, mountains",
+        "population": "4500000000"
+      },
+      "dialogue": []
+    },
+    {
+      "name": "C-3PO",
+      "height": "167",
+      "mass": "75",
+      "birth_year": "112BBY",
+      "eye_color": "yellow",
+      "homeworld": {
+        "name": "Tatooine",
+        "diameter": "10465",
+        "climate": "arid",
+        "terrain": "desert",
+        "population": "200000"
+      },
+      "dialogue": []
+    },
+    {
+      "name": "Leia Organa",
+      "height": "150",
+      "mass": "49",
+      "birth_year": "19BBY",
+      "eye_color": "brown",
+      "homeworld": {
+        "name": "Alderaan",
+        "diameter": "12500",
+        "climate": "temperate",
+        "terrain": "grasslands, mountains",
+        "population": "2000000000"
+      },
+      "dialogue": []
+    }
+  ],
+  "max_atmosphering_speed": "950",
+  "length": "150"
+}
