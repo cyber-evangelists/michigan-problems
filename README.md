@@ -1,25 +1,28 @@
-# SI 506: Problem Set 11
+# This Week's Problem Set: Modules and Caching
 
-## This week's Problem Set
+## Overview
 
-This week, we focus on modules and caching.
-You will work with two Python files:
+This week, we're diving into the concepts of modules and caching. You'll be working with two Python files to solidify your understanding:
 
-- `problem_set_11.py`: the main workspace
-- `five_oh_six.py`: a module containing utility functions
+- `problem_set_11.py`: Your main workspace.
+- `five_oh_six.py`: A utility module that provides essential functions.
 
 ## Data
 
-The data used in this
-assignment is sourced from the [Star Wars API](https://swapi.py4e.com/) (SWAPI) and
-[Wookieepedia](https://starwars.fandom.com/wiki/Main_Page).
+For this assignment, we're leveraging data from two sources: the Star Wars API (SWAPI) and Wookieepedia.
 
-__Caching__: This assignment utilizes a local "cache" dictionary located in the utilities module
-that eliminates redundant HTTP GET requests made to SWAPI by storing the SWAPI responses locally.
-The caching workflow is implemented _fully_ and all you _must_ do is call the function
-`get_swapi_resource()` whenever you need to retrieve a SWAPI representation of a person/droid,
-planet, or starship.
+## Caching Mechanism
 
+A significant part of this assignment involves utilizing a local caching mechanism to optimize HTTP GET requests to SWAPI. Here's how it works:
+
+- A "cache" dictionary is maintained within the `five_oh_six.py` utilities module. This cache stores responses from SWAPI to prevent redundant requests.
+- To fetch data (whether it's information about a person/droid, planet, or starship from SWAPI), you must use the `get_swapi_resource()` function. This function manages the caching process, ensuring efficient data retrieval.
+- **Important**: Directly calling `utl.get_resource` bypasses this caching mechanism. Always use `get_swapi_resource()` to maintain the efficiency provided by the caching strategy.
+- Each execution of `problem_set_11.py` automatically updates a JSON file with the contents of the cache dictionary, ensuring your cached data persists between sessions.
+
+### Note:
+
+This approach to caching is designed to enhance your application's performance by reducing the number of HTTP requests made during runtime. By adhering to these guidelines, you'll ensure optimal use of resources and faster response times for your application.
 :exclamation: _Do not_ call `utl.get_resource` directly. Doing so sidesteps the
 cache and undercuts the built-in caching optimization strategy.
 
